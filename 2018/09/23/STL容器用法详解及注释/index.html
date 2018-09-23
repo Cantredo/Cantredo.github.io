@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="STL," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="What is past is prologue.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cantredo`s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="写在前面以下摘录自wiki  STL又称标准模板库，是一个c++软件库，其中包含4个组件，分别为：    算法   容器   函数   迭代器      STL将“在数据上的操作”与“要执行操作的数据分开”，分别以如下概念指代：      容器：包含、放置数据的地方。 迭代器： 在容器中指出一个位置、或成对使用以划定一个区域，用来限定操作所涉及到的数据范围。 算法： 要执行的操作。   总而言之，">
+<meta name="keywords" content="STL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="STL容器用法详解及注解(持续更新)">
+<meta property="og:url" content="http://yoursite.com/2018/09/23/STL容器用法详解及注释/index.html">
 <meta property="og:site_name" content="Cantredo`s blog">
-<meta property="og:description" content="What is past is prologue.">
+<meta property="og:description" content="写在前面以下摘录自wiki  STL又称标准模板库，是一个c++软件库，其中包含4个组件，分别为：    算法   容器   函数   迭代器      STL将“在数据上的操作”与“要执行操作的数据分开”，分别以如下概念指代：      容器：包含、放置数据的地方。 迭代器： 在容器中指出一个位置、或成对使用以划定一个区域，用来限定操作所涉及到的数据范围。 算法： 要执行的操作。   总而言之，">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-23T03:18:30.612Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cantredo`s blog">
-<meta name="twitter:description" content="What is past is prologue.">
+<meta name="twitter:title" content="STL容器用法详解及注解(持续更新)">
+<meta name="twitter:description" content="写在前面以下摘录自wiki  STL又称标准模板库，是一个c++软件库，其中包含4个组件，分别为：    算法   容器   函数   迭代器      STL将“在数据上的操作”与“要执行操作的数据分开”，分别以如下概念指代：      容器：包含、放置数据的地方。 迭代器： 在容器中指出一个位置、或成对使用以划定一个区域，用来限定操作所涉及到的数据范围。 算法： 要执行的操作。   总而言之，">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/23/STL容器用法详解及注释/"/>
 
 
 
 
 
-  <title>Cantredo`s blog</title>
+  <title>STL容器用法详解及注解(持续更新) | Cantredo`s blog</title>
   
 
 
@@ -143,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -249,9 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/23/STL容器用法详解及注释/" itemprop="url">STL容器用法详解及注解(持续更新)</a></h1>
+          <h1 class="post-title" itemprop="name headline">STL容器用法详解及注解(持续更新)</h1>
         
 
         <div class="post-meta">
@@ -334,36 +333,135 @@
       
 
       
-        
-          
-          写在前面以下摘录自wiki
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>以下摘录自wiki</p>
+<blockquote>
+<p>STL又称标准模板库，是一个c++软件库，其中包含4个组件，分别为：</p>
+</blockquote>
+<blockquote>
+<ul>
+<li>算法  </li>
+<li>容器  </li>
+<li>函数  </li>
+<li>迭代器  </li>
+</ul>
+</blockquote>
+<blockquote>
+<p>STL将“在数据上的操作”与“要执行操作的数据分开”，分别以如下概念指代：  </p>
+</blockquote>
+<blockquote>
+<ul>
+<li>容器：包含、放置数据的地方。</li>
+<li>迭代器： 在容器中指出一个位置、或成对使用以划定一个区域，用来限定操作所涉及到的数据范围。</li>
+<li>算法： 要执行的操作。</li>
+</ul>
+</blockquote>
+<p>总而言之，STL在编程的方方面面都有着巨大的作用，接下来将介绍常用的STL以及用法。</p>
+<h1 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h1><h2 id="Vector向量容器"><a href="#Vector向量容器" class="headerlink" title="Vector向量容器"></a>Vector向量容器</h2><p>Vector向量容器可在尾端插入或者删除元素，可动态调整所占用的内存空间，可以将其看作是以顺序结构实现的线性表。vector可以保存任意类型的变量，包括用户自定义的数据类型。</p>
+<h2 id="包含头文件"><a href="#包含头文件" class="headerlink" title="包含头文件"></a>包含头文件</h2><p>#include &lt;vector></p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a><strong>定义</strong></h2><p>vector&lt;T> vec ;</p>
+<h2 id="增加或者删除元素"><a href="#增加或者删除元素" class="headerlink" title="增加或者删除元素"></a>增加或者删除元素</h2><ul>
+<li>vec.push_back(elem) –增加元素到vector容器的尾端</li>
+<li>vec.pop_back(elem) –删除尾端元素</li>
+<li>vec.insert(it,elem) –在迭代器it指向的元素前插入某一元素</li>
+<li>vec.insert(it,n,elem) –在迭代器it指向的元素前插入n个元素</li>
+<li>vec.erase(it) –删除迭代器it指向的元素</li>
+<li>vec.erase(begin_it,end_it) –删除区间 [begin_it,end_it) 的元素</li>
+<li>vec.clear() –清空全部元素</li>
+</ul>
+<h2 id="访问元素"><a href="#访问元素" class="headerlink" title="访问元素"></a>访问元素</h2><ul>
+<li>vec[i] –访问索引值为i的元素</li>
+<li>vec.front() –返回vec第一个元素</li>
+<li>vec.back() –返回vec最后一个元素</li>
+</ul>
+<h2 id="获取当前长度或者当前容量"><a href="#获取当前长度或者当前容量" class="headerlink" title="获取当前长度或者当前容量"></a>获取当前长度或者当前容量</h2><ul>
+<li>vec.size() –返回vec当前的长度</li>
+<li>vec.empty() –若为空返回true否则为false</li>
+</ul>
+<h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><ul>
+<li>vector&lt;T>::iterator it –定义一个T数据类型的正向迭代器it</li>
+<li>Vector&lt;T>::reverse_iterator it –定义一个T数据类型的反向迭代器it</li>
+</ul>
+<p>##使用举例</p>
+<pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
 
-STL又称标准模板库，是一个c++软件库，其中包含4个组件，分别为：
+//STL组件属于std名称空间，以下不再赘述
+using namespace std ;
 
+int main(){
+    cout &lt;&lt; &quot;enter the number of element:&quot; &lt;&lt; endl ;
+    int num ;
+    cin &gt;&gt; num ;
+    if ( num == 0 ){
+        cout &lt;&lt; &quot;please enter again&quot; &lt;&lt; endl ;
+        cin &gt;&gt; num ;
+    }
 
+    //定义一个数据类型为 int 的 vector 容器 vec
+    vector&lt;int&gt; vec ;
+    for ( int i = 0 ; i &lt; num ; i ++ ){
+        cout &lt;&lt; &quot;input: &quot; ;
+        int number ;
+        cin &gt;&gt; number ;
+        //将元素添加至表尾
+        vec.push_back(number) ;
+    }
 
-算法  
-容器  
-函数  
-迭代器  
+    //定义一个正向迭代器 it
+    vector&lt;int&gt;::iterator it ;
+    //定义一个反向迭代器 rit
+    vector&lt;int&gt;::reverse_iterator rit ;
+    cout &lt;&lt; endl &lt;&lt; &quot;output:&quot; &lt;&lt; endl ;
+    //正向输出
+    cout &lt;&lt; &quot;in order: &quot; &lt;&lt; endl ;
+    for ( it = vec.begin() ; it != vec.end() ; it ++ ){
+        cout &lt;&lt; *it &lt;&lt; &quot; &quot; ;
+    }
+    cout &lt;&lt; endl ;
+    //反向输出
+    cout &lt;&lt; &quot;reverse order: &quot; &lt;&lt; endl ;
+    for ( rit = vec.rbegin() ; rit != vec.rend() ; rit ++ ){
+        cout &lt;&lt; *rit &lt;&lt; &quot; &quot; ;
+    }
+    cout &lt;&lt; endl &lt;&lt; endl ;
 
+    //插入操作
+    cout &lt;&lt; &quot;insert:(position , element)&quot; &lt;&lt; endl ;
+    int pos , element ;
+    cin &gt;&gt; pos &gt;&gt; element ;
+    if ( pos &lt; 0 || pos &gt; vec.size() ){
+        cout &lt;&lt; &quot;please enter position again&quot; &lt;&lt; endl ;
+        cin &gt;&gt; pos ;
+    }
+    vec.insert(vec.begin() + pos , element) ;
+    cout &lt;&lt; &quot;there are *&quot; &lt;&lt; vec.size() &lt;&lt; &quot;* numbers now&quot; &lt;&lt; endl ;
+    cout &lt;&lt; &quot;output:&quot; &lt;&lt; endl ;
+    for ( it = vec.begin() ; it != vec.end() ; it ++ ){
+        cout &lt;&lt; *it &lt;&lt; &quot; &quot; ;
+    }
+    cout &lt;&lt; endl &lt;&lt; endl ;
 
-
-STL将“在数据上的操作”与“要执行操作的数据分开”，分别以如下概念指代：  
-
-
-
-容器：包含、放置数据的地方。
-迭代器： 在容器中指出一个位置
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/23/STL容器用法详解及注释/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    //删除操作
+    cout &lt;&lt; &quot;erase:(begin , end)&quot; &lt;&lt; endl ;
+    int first , last ;
+    cin &gt;&gt; first &gt;&gt; last ;
+    if ( first &lt; 0 || last &gt; vec.size() ){
+        cout &lt;&lt; &quot;please enter again&quot; &lt;&lt; endl ;
+        cin &gt;&gt; first &gt;&gt; last ;
+    }
+    vec.erase(vec.begin() + first , vec.begin() + last) ;
+    if ( !vec.empty() ){
+        cout &lt;&lt; &quot;there are *&quot; &lt;&lt; vec.size() &lt;&lt; &quot;* numbers now&quot; &lt;&lt; endl ;
+        for ( it = vec.begin() ; it != vec.end() ; it ++ ){
+            cout &lt;&lt; *it &lt;&lt; &quot; &quot; ;
+        }
+    }else{
+        cout &lt;&lt; &quot;the vector is empty now!&quot; &lt;&lt; endl ;
+    }
+    cout &lt;&lt; endl ;
+    return 0 ;
+}
+</code></pre>
       
     </div>
     
@@ -378,174 +476,36 @@ STL将“在数据上的操作”与“要执行操作的数据分开”，分�
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/22/Game-Start/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Cantredo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cantredo`s blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/22/Game-Start/" itemprop="url">Game Start!</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-22T18:30:28+08:00">
-                2018-09-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Daily-Record/" itemprop="url" rel="index">
-                    <span itemprop="name">Daily Record</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/STL/" rel="tag"># STL</a>
           
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/09/22/Game-Start/" class="leancloud_visitors" data-flag-title="Game Start!">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          历经七个多小时，终于利用Hexo以及GitHub搭建好了本博客，同时对各开源贡献者以及搭建博客的教程感激不尽。——用以纪念的第一篇博客
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/22/Game-Start/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/22/Game-Start/" rel="next" title="Game Start!">
+                <i class="fa fa-chevron-left"></i> Game Start!
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -555,10 +515,11 @@ STL将“在数据上的操作”与“要执行操作的数据分开”，分�
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -566,6 +527,10 @@ STL将“在数据上的操作”与“要执行操作的数据分开”，分�
 
 
           
+
+  
+
+
 
         </div>
         
@@ -586,8 +551,17 @@ STL将“在数据上的操作”与“要执行操作的数据分开”，分�
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -647,6 +621,22 @@ STL将“在数据上的操作”与“要执行操作的数据分开”，分�
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#容器"><span class="nav-number">2.</span> <span class="nav-text">容器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector向量容器"><span class="nav-number">2.1.</span> <span class="nav-text">Vector向量容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#包含头文件"><span class="nav-number">2.2.</span> <span class="nav-text">包含头文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">2.3.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增加或者删除元素"><span class="nav-number">2.4.</span> <span class="nav-text">增加或者删除元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问元素"><span class="nav-number">2.5.</span> <span class="nav-text">访问元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取当前长度或者当前容量"><span class="nav-number">2.6.</span> <span class="nav-text">获取当前长度或者当前容量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#迭代器"><span class="nav-number">2.7.</span> <span class="nav-text">迭代器</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -792,6 +782,10 @@ STL将“在数据上的操作”与“要执行操作的数据分开”，分�
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
