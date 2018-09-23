@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Cantredo`s blog">
 <meta property="og:description" content="写在前面以下摘录自wiki  STL又称标准模板库，是一个c++软件库，其中包含4个组件，分别为：    算法   容器   函数   迭代器      STL将“在数据上的操作”与“要执行操作的数据分开”，分别以如下概念指代：      容器：包含、放置数据的地方。 迭代器： 在容器中指出一个位置、或成对使用以划定一个区域，用来限定操作所涉及到的数据范围。 算法： 要执行的操作。   总而言之，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-23T03:21:43.007Z">
+<meta property="og:updated_time" content="2018-09-23T03:26:27.658Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="STL容器用法详解及注解(持续更新)">
 <meta name="twitter:description" content="写在前面以下摘录自wiki  STL又称标准模板库，是一个c++软件库，其中包含4个组件，分别为：    算法   容器   函数   迭代器      STL将“在数据上的操作”与“要执行操作的数据分开”，分别以如下概念指代：      容器：包含、放置数据的地方。 迭代器： 在容器中指出一个位置、或成对使用以划定一个区域，用来限定操作所涉及到的数据范围。 算法： 要执行的操作。   总而言之，">
@@ -381,85 +381,7 @@
 <li>vector&lt;T>::iterator it –定义一个T数据类型的正向迭代器it</li>
 <li>Vector&lt;T>::reverse_iterator it –定义一个T数据类型的反向迭代器it</li>
 </ul>
-<h2 id="使用举例"><a href="#使用举例" class="headerlink" title="使用举例"></a>使用举例</h2><pre><code>#include &lt;iostream&gt;
-#include &lt;vector&gt;
-
-//STL组件属于std名称空间，以下不再赘述
-using namespace std ;
-
-int main(){
-    cout &lt;&lt; &quot;enter the number of element:&quot; &lt;&lt; endl ;
-    int num ;
-    cin &gt;&gt; num ;
-    if ( num == 0 ){
-        cout &lt;&lt; &quot;please enter again&quot; &lt;&lt; endl ;
-        cin &gt;&gt; num ;
-    }
-
-    //定义一个数据类型为 int 的 vector 容器 vec
-    vector&lt;int&gt; vec ;
-    for ( int i = 0 ; i &lt; num ; i ++ ){
-        cout &lt;&lt; &quot;input: &quot; ;
-        int number ;
-        cin &gt;&gt; number ;
-        //将元素添加至表尾
-        vec.push_back(number) ;
-    }
-
-    //定义一个正向迭代器 it
-    vector&lt;int&gt;::iterator it ;
-    //定义一个反向迭代器 rit
-    vector&lt;int&gt;::reverse_iterator rit ;
-    cout &lt;&lt; endl &lt;&lt; &quot;output:&quot; &lt;&lt; endl ;
-    //正向输出
-    cout &lt;&lt; &quot;in order: &quot; &lt;&lt; endl ;
-    for ( it = vec.begin() ; it != vec.end() ; it ++ ){
-        cout &lt;&lt; *it &lt;&lt; &quot; &quot; ;
-    }
-    cout &lt;&lt; endl ;
-    //反向输出
-    cout &lt;&lt; &quot;reverse order: &quot; &lt;&lt; endl ;
-    for ( rit = vec.rbegin() ; rit != vec.rend() ; rit ++ ){
-        cout &lt;&lt; *rit &lt;&lt; &quot; &quot; ;
-    }
-    cout &lt;&lt; endl &lt;&lt; endl ;
-
-    //插入操作
-    cout &lt;&lt; &quot;insert:(position , element)&quot; &lt;&lt; endl ;
-    int pos , element ;
-    cin &gt;&gt; pos &gt;&gt; element ;
-    if ( pos &lt; 0 || pos &gt; vec.size() ){
-        cout &lt;&lt; &quot;please enter position again&quot; &lt;&lt; endl ;
-        cin &gt;&gt; pos ;
-    }
-    vec.insert(vec.begin() + pos , element) ;
-    cout &lt;&lt; &quot;there are *&quot; &lt;&lt; vec.size() &lt;&lt; &quot;* numbers now&quot; &lt;&lt; endl ;
-    cout &lt;&lt; &quot;output:&quot; &lt;&lt; endl ;
-    for ( it = vec.begin() ; it != vec.end() ; it ++ ){
-        cout &lt;&lt; *it &lt;&lt; &quot; &quot; ;
-    }
-    cout &lt;&lt; endl &lt;&lt; endl ;
-
-    //删除操作
-    cout &lt;&lt; &quot;erase:(begin , end)&quot; &lt;&lt; endl ;
-    int first , last ;
-    cin &gt;&gt; first &gt;&gt; last ;
-    if ( first &lt; 0 || last &gt; vec.size() ){
-        cout &lt;&lt; &quot;please enter again&quot; &lt;&lt; endl ;
-        cin &gt;&gt; first &gt;&gt; last ;
-    }
-    vec.erase(vec.begin() + first , vec.begin() + last) ;
-    if ( !vec.empty() ){
-        cout &lt;&lt; &quot;there are *&quot; &lt;&lt; vec.size() &lt;&lt; &quot;* numbers now&quot; &lt;&lt; endl ;
-        for ( it = vec.begin() ; it != vec.end() ; it ++ ){
-            cout &lt;&lt; *it &lt;&lt; &quot; &quot; ;
-        }
-    }else{
-        cout &lt;&lt; &quot;the vector is empty now!&quot; &lt;&lt; endl ;
-    }
-    cout &lt;&lt; endl ;
-    return 0 ;
-}
+<h2 id="使用举例"><a href="#使用举例" class="headerlink" title="使用举例"></a>使用举例</h2><pre><code><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//STL组件属于std名称空间，以下不再赘述</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span> ;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"enter the number of element:"</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    <span class="keyword">int</span> num ;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; num ;</span><br><span class="line">    <span class="keyword">if</span> ( num == <span class="number">0</span> )&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"please enter again"</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; num ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//定义一个数据类型为 int 的 vector 容器 vec</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vec ;</span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; num ; i ++ )&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"input: "</span> ;</span><br><span class="line">        <span class="keyword">int</span> number ;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; number ;</span><br><span class="line">        <span class="comment">//将元素添加至表尾</span></span><br><span class="line">        vec.push_back(number) ;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//定义一个正向迭代器 it</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it ;</span><br><span class="line">    <span class="comment">//定义一个反向迭代器 rit</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::reverse_iterator rit ;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span> &lt;&lt; <span class="string">"output:"</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    <span class="comment">//正向输出</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"in order: "</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    <span class="keyword">for</span> ( it = vec.begin() ; it != vec.end() ; it ++ )&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="string">" "</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    <span class="comment">//反向输出</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"reverse order: "</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    <span class="keyword">for</span> ( rit = vec.rbegin() ; rit != vec.rend() ; rit ++ )&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *rit &lt;&lt; <span class="string">" "</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//插入操作</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"insert:(position , element)"</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    <span class="keyword">int</span> pos , element ;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; pos &gt;&gt; element ;</span><br><span class="line">    <span class="keyword">if</span> ( pos &lt; <span class="number">0</span> || pos &gt; vec.size() )&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"please enter position again"</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; pos ;</span><br><span class="line">    &#125;</span><br><span class="line">    vec.insert(vec.begin() + pos , element) ;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"there are *"</span> &lt;&lt; vec.size() &lt;&lt; <span class="string">"* numbers now"</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"output:"</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    <span class="keyword">for</span> ( it = vec.begin() ; it != vec.end() ; it ++ )&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="string">" "</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//删除操作</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"erase:(begin , end)"</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    <span class="keyword">int</span> first , last ;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; first &gt;&gt; last ;</span><br><span class="line">    <span class="keyword">if</span> ( first &lt; <span class="number">0</span> || last &gt; vec.size() )&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"please enter again"</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; first &gt;&gt; last ;</span><br><span class="line">    &#125;</span><br><span class="line">    vec.erase(vec.begin() + first , vec.begin() + last) ;</span><br><span class="line">    <span class="keyword">if</span> ( !vec.empty() )&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"there are *"</span> &lt;&lt; vec.size() &lt;&lt; <span class="string">"* numbers now"</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">        <span class="keyword">for</span> ( it = vec.begin() ; it != vec.end() ; it ++ )&#123;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="string">" "</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"the vector is empty now!"</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </code></pre>
       
     </div>
