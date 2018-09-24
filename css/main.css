@@ -1741,6 +1741,46 @@ pre .javascript .function {
   max-width: 96px;
   height: auto;
   border: 2px solid #333;
+/* ͷ��Բ�� */
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  box-shadow: inset 0 -1px 0 #333 sf;
+/* ����ѭ������ [animation: (play)�������� (2s)��������ʱ����λ���΢�� (ase-out)�������ŵ��ٶ�����Ϊ�Ե��ٽ��� 
+    (1s)�ȴ�1��Ȼ��ʼ���� (1)�������Ŵ���(infiniteΪѭ������) ]*/
+/* ��꾭��ͷ����ת360�� */
+  -webkit-transition: -webkit-transform 1s ease-out;
+  -moz-transition: -moz-transform 1s ease-out;
+  transition: transform 1s ease-out;
+}
+img:hover {
+/* ��꾭��ֹͣͷ����ת 
+  -webkit-animation-play-state:paused;
+  animation-play-state:paused;*/
+/* ��꾭��ͷ����ת360�� */
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  -ms-transform: rotateZ(360deg);
+  -o-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
+}
+@-webkit-keyframes play {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+  }
+}
+@-moz-keyframes play {
+  0% {
+    -moz-transform: rotateZ(0deg);
+  }
+  100% {
+    -moz-transform: rotateZ(-360deg);
+  }
 }
 .site-author-name {
   margin: 5px 0 0;
@@ -1753,6 +1793,70 @@ pre .javascript .function {
   text-align: center;
   font-size: 14px;
   color: #999;
+}
+@-moz-keyframes play {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+    -moz-transform: rotateZ(-360deg);
+    -ms-transform: rotateZ(-360deg);
+    -o-transform: rotateZ(-360deg);
+    transform: rotateZ(-360deg);
+  }
+}
+@-webkit-keyframes play {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+    -moz-transform: rotateZ(-360deg);
+    -ms-transform: rotateZ(-360deg);
+    -o-transform: rotateZ(-360deg);
+    transform: rotateZ(-360deg);
+  }
+}
+@-o-keyframes play {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+    -moz-transform: rotateZ(-360deg);
+    -ms-transform: rotateZ(-360deg);
+    -o-transform: rotateZ(-360deg);
+    transform: rotateZ(-360deg);
+  }
+}
+@keyframes play {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-360deg);
+    -moz-transform: rotateZ(-360deg);
+    -ms-transform: rotateZ(-360deg);
+    -o-transform: rotateZ(-360deg);
+    transform: rotateZ(-360deg);
+  }
 }
 .site-state {
   overflow: hidden;
@@ -1822,7 +1926,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0888ff;
+  background: #c3ec4a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2659,4 +2763,38 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+.highlight {
+  position: relative;
+}
+.btn-copy {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #eee;
+  background-image: linear-gradient(#fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #333;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  padding: 2px 6px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  opacity: 0;
+}
+.btn-copy span {
+  margin-left: 5px;
+}
+.highlight:hover .btn-copy {
+  opacity: 1;
 }
