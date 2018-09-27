@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="日常水题,模板," />
+  <meta name="keywords" content="日常水题,STL,贪心,priority_queue," />
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="问题 A: 【快速幂】a^b时间限制: 1 Sec  内存限制: 128 MB提交: 703  解决: 159[提交] [状态] [讨论版] [命题人:admin]题目描述求 a 的 b 次方对 p 取模的值，其中 1≤a,b,p≤109   输入三个用空格隔开的整数a,b和p。 输出一个整数，表示ab mod p的值。 样例输入2 3 9 样例输出8 快速幂模板，代码如下：12345678910">
-<meta name="keywords" content="日常水题,模板">
+<meta name="description" content="懒省事的小明时间限制：3000 ms  |  内存限制：65535 KB难度：3描述小明很想吃果子，正好果园果子熟了。在果园里，小明已经将所有的果子打了下来，而且按果子的不同种类分成了不同的堆。小明决定把所有的果子合成一堆。 因为小明比较懒，为了省力气，小明开始想点子了: 每一次合并，小明可以把两堆果子合并到一起，消耗的体力等于两堆果子的重量之和。可以看出，所有的果子经过n-1次合并之后，就只剩下">
+<meta name="keywords" content="日常水题,STL,贪心,priority_queue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[快速幂]a^b">
-<meta property="og:url" content="http://yoursite.com/2018/09/24/快速幂-a-b/index.html">
+<meta property="og:title" content="NyistOJ 55 懒省事的小明">
+<meta property="og:url" content="http://yoursite.com/2018/09/27/NyistOJ-55-懒省事的小明/index.html">
 <meta property="og:site_name" content="Cantredo`s blog">
-<meta property="og:description" content="问题 A: 【快速幂】a^b时间限制: 1 Sec  内存限制: 128 MB提交: 703  解决: 159[提交] [状态] [讨论版] [命题人:admin]题目描述求 a 的 b 次方对 p 取模的值，其中 1≤a,b,p≤109   输入三个用空格隔开的整数a,b和p。 输出一个整数，表示ab mod p的值。 样例输入2 3 9 样例输出8 快速幂模板，代码如下：12345678910">
+<meta property="og:description" content="懒省事的小明时间限制：3000 ms  |  内存限制：65535 KB难度：3描述小明很想吃果子，正好果园果子熟了。在果园里，小明已经将所有的果子打了下来，而且按果子的不同种类分成了不同的堆。小明决定把所有的果子合成一堆。 因为小明比较懒，为了省力气，小明开始想点子了: 每一次合并，小明可以把两堆果子合并到一起，消耗的体力等于两堆果子的重量之和。可以看出，所有的果子经过n-1次合并之后，就只剩下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-26T12:32:55.118Z">
+<meta property="og:updated_time" content="2018-09-27T15:34:18.399Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[快速幂]a^b">
-<meta name="twitter:description" content="问题 A: 【快速幂】a^b时间限制: 1 Sec  内存限制: 128 MB提交: 703  解决: 159[提交] [状态] [讨论版] [命题人:admin]题目描述求 a 的 b 次方对 p 取模的值，其中 1≤a,b,p≤109   输入三个用空格隔开的整数a,b和p。 输出一个整数，表示ab mod p的值。 样例输入2 3 9 样例输出8 快速幂模板，代码如下：12345678910">
+<meta name="twitter:title" content="NyistOJ 55 懒省事的小明">
+<meta name="twitter:description" content="懒省事的小明时间限制：3000 ms  |  内存限制：65535 KB难度：3描述小明很想吃果子，正好果园果子熟了。在果园里，小明已经将所有的果子打了下来，而且按果子的不同种类分成了不同的堆。小明决定把所有的果子合成一堆。 因为小明比较懒，为了省力气，小明开始想点子了: 每一次合并，小明可以把两堆果子合并到一起，消耗的体力等于两堆果子的重量之和。可以看出，所有的果子经过n-1次合并之后，就只剩下">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/09/24/快速幂-a-b/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/27/NyistOJ-55-懒省事的小明/"/>
 
 
 
 
 
-  <title>[快速幂]a^b | Cantredo`s blog</title>
+  <title>NyistOJ 55 懒省事的小明 | Cantredo`s blog</title>
   
 
 
@@ -240,7 +240,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/24/快速幂-a-b/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/27/NyistOJ-55-懒省事的小明/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cantredo">
@@ -257,7 +257,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[快速幂]a^b</h1>
+          <h1 class="post-title" itemprop="name headline">NyistOJ 55 懒省事的小明</h1>
         
 
         <div class="post-meta">
@@ -269,8 +269,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-24T18:37:21+08:00">
-                2018-09-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-27T23:26:37+08:00">
+                2018-09-27
               </time>
             
 
@@ -309,7 +309,7 @@
 
           
           
-             <span id="/2018/09/24/快速幂-a-b/" class="leancloud_visitors" data-flag-title="[快速幂]a^b">
+             <span id="/2018/09/27/NyistOJ-55-懒省事的小明/" class="leancloud_visitors" data-flag-title="NyistOJ 55 懒省事的小明">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -335,7 +335,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  197
+                  665
                 </span>
               
 
@@ -351,7 +351,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -372,13 +372,16 @@
       
 
       
-        <p>问题 A: 【快速幂】a^b<br>时间限制: 1 Sec  内存限制: 128 MB<br>提交: 703  解决: 159<br>[提交] [状态] [讨论版] [命题人:admin]<br>题目描述<br>求 a 的 b 次方对 p 取模的值，其中 1≤a,b,p≤109  </p>
-<p>输入<br>三个用空格隔开的整数a,b和p。</p>
-<p>输出<br>一个整数，表示ab mod p的值。</p>
-<p>样例输入<br>2 3 9</p>
-<p>样例输出<br>8</p>
-<p>快速幂模板，代码如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span> ;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">quick_pow</span><span class="params">( ll a , ll b , ll p )</span></span>&#123;</span><br><span class="line">    ll ans = <span class="number">1</span> % p , base = a ;</span><br><span class="line">    <span class="keyword">while</span> ( b )&#123;</span><br><span class="line">        <span class="keyword">if</span> ( b &amp; <span class="number">1</span> )&#123;</span><br><span class="line">            ans = (ans % p * base % p) % p ;</span><br><span class="line">        &#125;</span><br><span class="line">        base = base * base % p ;</span><br><span class="line">        b &gt;&gt;= <span class="number">1</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ll a , b , p ;</span><br><span class="line">    <span class="keyword">while</span> ( <span class="built_in">scanf</span>(<span class="string">"%lld %lld %lld"</span> , &amp;a , &amp;b , &amp;p) != EOF )&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span> , quick_pow(a , b , p)) ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
+        <h2 id="懒省事的小明"><a href="#懒省事的小明" class="headerlink" title="懒省事的小明"></a>懒省事的小明</h2><h3 id="时间限制：3000-ms-内存限制：65535-KB"><a href="#时间限制：3000-ms-内存限制：65535-KB" class="headerlink" title="时间限制：3000 ms  |  内存限制：65535 KB"></a>时间限制：3000 ms  |  内存限制：65535 KB</h3><h3 id="难度：3"><a href="#难度：3" class="headerlink" title="难度：3"></a>难度：3</h3><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>小明很想吃果子，正好果园果子熟了。在果园里，小明已经将所有的果子打了下来，而且按果子的不同种类分成了不同的堆。小明决定把所有的果子合成一堆。 因为小明比较懒，为了省力气，小明开始想点子了:</p>
+<p>每一次合并，小明可以把两堆果子合并到一起，消耗的体力等于两堆果子的重量之和。可以看出，所有的果子经过n-1次合并之后，就只剩下一堆了。小明在合并果子时总共消耗的体力等于每次合并所耗体力之和。</p>
+<p>因为还要花大力气把这些果子搬回家，所以小明在合并果子时要尽可能地节省体力。假定每个果子重量都为1，并且已知果子的种类数和每种果子的数目，你的任务是设计出合并的次序方案，使小明耗费的体力最少，并输出这个最小的体力耗费值。</p>
+<p>例如有3种果子，数目依次为1，2，9。可以先将1、2堆合并，新堆数目为3，耗费体力为3。接着，将新堆与原先的第三堆合并，又得到新的堆，数目为12，耗费体力为12。所以小明总共耗费体力=3+12=15。可以证明15为最小的体力耗费值。</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>第一行输入整数N(0&lt;N&lt;=10)表示测试数据组数。接下来每组测试数据输入包括两行，第一行是一个整数n(1&lt;＝n&lt;=12000)，表示果子的种类数。第二行包含n个整数，用空格分隔，第i个整数ai(1&lt;＝ai&lt;=20000)是第i种果子的数目。</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>每组测试数据输出包括一行，这一行只包含一个整数，也就是最小的体力耗费值。  </p>
+<h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><p>1<br>3<br>1 2 9  </p>
+<h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h3><p>15</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>贪心+优先队列。强势占坑！！国庆节补充…</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span> ;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t ;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t ;</span><br><span class="line">    <span class="keyword">while</span> ( t -- )&#123;</span><br><span class="line">        <span class="keyword">int</span> n ;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; n ;</span><br><span class="line">        ll ans = <span class="number">0</span> ;</span><br><span class="line">        priority_queue&lt;ll , <span class="built_in">vector</span>&lt;ll&gt; , greater&lt;ll&gt; &gt; p_que ;</span><br><span class="line">        <span class="keyword">for</span> ( <span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; n ; i ++ )&#123;</span><br><span class="line">            <span class="keyword">int</span> x ;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; x ;</span><br><span class="line">            p_que.push(x) ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">0</span> ;</span><br><span class="line">        <span class="keyword">while</span>( p_que.size() != <span class="number">1</span> )&#123;</span><br><span class="line">            num = p_que.top() ;</span><br><span class="line">            p_que.pop() ;</span><br><span class="line">            num += p_que.top() ;</span><br><span class="line">            p_que.pop() ;</span><br><span class="line">            ans += num ;</span><br><span class="line">            p_que.push(num) ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -393,12 +396,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/09/24/快速幂-a-b/">[快速幂]a^b</a></p>
+  <p><span>本文标题:</span><a href="/2018/09/27/NyistOJ-55-懒省事的小明/">NyistOJ 55 懒省事的小明</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Cantredo 的个人博客">Cantredo</a></p>
-  <p><span>发布时间:</span>2018年09月24日 - 18:09</p>
-  <p><span>最后更新:</span>2018年09月26日 - 20:09</p>
-  <p><span>原始链接:</span><a href="/2018/09/24/快速幂-a-b/" title="[快速幂]a^b">http://yoursite.com/2018/09/24/快速幂-a-b/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/09/24/快速幂-a-b/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2018年09月27日 - 23:09</p>
+  <p><span>最后更新:</span>2018年09月27日 - 23:09</p>
+  <p><span>原始链接:</span><a href="/2018/09/27/NyistOJ-55-懒省事的小明/" title="NyistOJ 55 懒省事的小明">http://yoursite.com/2018/09/27/NyistOJ-55-懒省事的小明/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/09/27/NyistOJ-55-懒省事的小明/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -430,7 +433,11 @@
           
             <a href="/tags/日常水题/" rel="tag"># 日常水题</a>
           
-            <a href="/tags/模板/" rel="tag"># 模板</a>
+            <a href="/tags/STL/" rel="tag"># STL</a>
+          
+            <a href="/tags/贪心/" rel="tag"># 贪心</a>
+          
+            <a href="/tags/priority-queue/" rel="tag"># priority_queue</a>
           
         </div>
       
@@ -443,8 +450,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/23/STL容器用法详解及注释/" rel="next" title="STL容器用法详解及注解(持续更新)">
-                <i class="fa fa-chevron-left"></i> STL容器用法详解及注解(持续更新)
+              <a href="/2018/09/27/题单/" rel="next" title="题单">
+                <i class="fa fa-chevron-left"></i> 题单
               </a>
             
           </div>
@@ -452,10 +459,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/25/博客更新日志/" rel="prev" title="博客更新日志">
-                博客更新日志 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -507,8 +510,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -572,6 +584,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#懒省事的小明"><span class="nav-number">1.</span> <span class="nav-text">懒省事的小明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#时间限制：3000-ms-内存限制：65535-KB"><span class="nav-number">1.1.</span> <span class="nav-text">时间限制：3000 ms  |  内存限制：65535 KB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#难度：3"><span class="nav-number">1.2.</span> <span class="nav-text">难度：3</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#描述"><span class="nav-number">2.</span> <span class="nav-text">描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入"><span class="nav-number">2.1.</span> <span class="nav-text">输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出"><span class="nav-number">2.2.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#样例输入"><span class="nav-number">2.3.</span> <span class="nav-text">样例输入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#样例输出"><span class="nav-number">2.4.</span> <span class="nav-text">样例输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解"><span class="nav-number">2.5.</span> <span class="nav-text">题解</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
