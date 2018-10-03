@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="STL,日常水题,贪心,priority_queue,NyistOJ," />
+  <meta name="keywords" content="日常水题,STL,贪心,priority_queue,NyistOJ," />
 
 
 
@@ -87,14 +87,14 @@
 
 
 <meta name="description" content="懒省事的小明时间限制：3000 ms  |  内存限制：65535 KB难度：3描述小明很想吃果子，正好果园果子熟了。在果园里，小明已经将所有的果子打了下来，而且按果子的不同种类分成了不同的堆。小明决定把所有的果子合成一堆。 因为小明比较懒，为了省力气，小明开始想点子了: 每一次合并，小明可以把两堆果子合并到一起，消耗的体力等于两堆果子的重量之和。可以看出，所有的果子经过n-1次合并之后，就只剩下">
-<meta name="keywords" content="STL,日常水题,贪心,priority_queue,NyistOJ">
+<meta name="keywords" content="日常水题,STL,贪心,priority_queue,NyistOJ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NyistOJ 55 懒省事的小明">
 <meta property="og:url" content="http://yoursite.com/2018/09/27/NyistOJ-55-懒省事的小明/index.html">
 <meta property="og:site_name" content="Cantredo`s blog">
 <meta property="og:description" content="懒省事的小明时间限制：3000 ms  |  内存限制：65535 KB难度：3描述小明很想吃果子，正好果园果子熟了。在果园里，小明已经将所有的果子打了下来，而且按果子的不同种类分成了不同的堆。小明决定把所有的果子合成一堆。 因为小明比较懒，为了省力气，小明开始想点子了: 每一次合并，小明可以把两堆果子合并到一起，消耗的体力等于两堆果子的重量之和。可以看出，所有的果子经过n-1次合并之后，就只剩下">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-28T13:25:28.946Z">
+<meta property="og:updated_time" content="2018-10-03T08:09:26.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NyistOJ 55 懒省事的小明">
 <meta name="twitter:description" content="懒省事的小明时间限制：3000 ms  |  内存限制：65535 KB难度：3描述小明很想吃果子，正好果园果子熟了。在果园里，小明已经将所有的果子打了下来，而且按果子的不同种类分成了不同的堆。小明决定把所有的果子合成一堆。 因为小明比较懒，为了省力气，小明开始想点子了: 每一次合并，小明可以把两堆果子合并到一起，消耗的体力等于两堆果子的重量之和。可以看出，所有的果子经过n-1次合并之后，就只剩下">
@@ -335,7 +335,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  665
+                  737
                 </span>
               
 
@@ -380,7 +380,7 @@
 <h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>每组测试数据输出包括一行，这一行只包含一个整数，也就是最小的体力耗费值。  </p>
 <h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><p>1<br>3<br>1 2 9  </p>
 <h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h3><p>15</p>
-<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>贪心+优先队列。强势占坑！！国庆节补充…</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><p>贪心+优先队列。最少所消耗的体力值总是最小的两个值相加，再将这个值放入容器中，再寻找最小的两个值相加，重复这个步骤直到容器的大小为1，正好符合 堆 的性质，所以我们可以用优先队列来解决这个问题。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span> ;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t ;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t ;</span><br><span class="line">    <span class="keyword">while</span> ( t -- )&#123;</span><br><span class="line">        <span class="keyword">int</span> n ;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; n ;</span><br><span class="line">        ll ans = <span class="number">0</span> ;</span><br><span class="line">        priority_queue&lt;ll , <span class="built_in">vector</span>&lt;ll&gt; , greater&lt;ll&gt; &gt; p_que ;</span><br><span class="line">        <span class="keyword">for</span> ( <span class="keyword">int</span> i = <span class="number">0</span> ; i &lt; n ; i ++ )&#123;</span><br><span class="line">            <span class="keyword">int</span> x ;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; x ;</span><br><span class="line">            p_que.push(x) ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">0</span> ;</span><br><span class="line">        <span class="keyword">while</span>( p_que.size() != <span class="number">1</span> )&#123;</span><br><span class="line">            num = p_que.top() ;</span><br><span class="line">            p_que.pop() ;</span><br><span class="line">            num += p_que.top() ;</span><br><span class="line">            p_que.pop() ;</span><br><span class="line">            ans += num ;</span><br><span class="line">            p_que.push(num) ;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
@@ -415,9 +415,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/STL/" rel="tag"># STL</a>
-          
             <a href="/tags/日常水题/" rel="tag"># 日常水题</a>
+          
+            <a href="/tags/STL/" rel="tag"># STL</a>
           
             <a href="/tags/贪心/" rel="tag"># 贪心</a>
           
@@ -529,7 +529,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -551,7 +551,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -618,7 +618,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">7.1k</span>
+    <span title="Site words total count">7.8k</span>
   
 </div>
 
