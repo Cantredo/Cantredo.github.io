@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Cantredo`s blog">
 <meta property="og:description" content="题目描述对于一个递归函数w(a,b,c)    如果 a≤0 or b≤0 or c≤0 就返回值1.   如果 a&amp;gt;20 or b&amp;gt;20 or c&amp;gt;20 就返回w(20,20,20)   如果 a&amp;lt;b 并且 b&amp;lt;c 就返回w(a,b,c-1)+w(a,b-1,c-1)-w(a,b-1,c)   其它的情况就返回 w(a−1,b,c)+w(a−1,b−1,c)+w(a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-13T14:49:23.518Z">
+<meta property="og:updated_time" content="2018-10-13T14:54:30.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="洛谷 P1464 Function">
 <meta name="twitter:description" content="题目描述对于一个递归函数w(a,b,c)    如果 a≤0 or b≤0 or c≤0 就返回值1.   如果 a&amp;gt;20 or b&amp;gt;20 or c&amp;gt;20 就返回w(20,20,20)   如果 a&amp;lt;b 并且 b&amp;lt;c 就返回w(a,b,c-1)+w(a,b-1,c-1)-w(a,b-1,c)   其它的情况就返回 w(a−1,b,c)+w(a−1,b−1,c)+w(a">
@@ -377,11 +377,9 @@
 <li>如果 a≤0 or b≤0 or c≤0 就返回值1.  </li>
 <li>如果 a&gt;20 or b&gt;20 or c&gt;20 就返回w(20,20,20)  </li>
 <li>如果 a&lt;b 并且 b&lt;c 就返回w(a,b,c-1)+w(a,b-1,c-1)-w(a,b-1,c)  </li>
-<li>其它的情况就返回 w(a−1,b,c)+w(a−1,b−1,c)+w(a−1,b,c−1)−w(a−1,b−1,c−1)<br>这是个简单的递归函数，但实现起来可能会有些问题。当a,b,ca,b,c均为15时，调用的次数将非常的多。你要想个办法才行.<br>//* absi2011 : 比如 w(30,-1,0)w(30,−1,0)既满足条件1又满足条件2</li>
+<li>其它的情况就返回 w(a−1,b,c)+w(a−1,b−1,c)+w(a−1,b,c−1)−w(a−1,b−1,c−1)<br>这是个简单的递归函数，但实现起来可能会有些问题。当a,b,ca,b,c均为15时，调用的次数将非常的多。你要想个办法才行.  </li>
 </ul>
-<p>这种时候我们就按最上面的条件来算</p>
-<p>所以答案为1</p>
-<p>/*//</p>
+<p>/<em> absi2011 : 比如 w(30,-1,0)w(30,−1,0)既满足条件1又满足条件2<br>这种时候我们就按最上面的条件来算<br>所以答案为1<br>/</em></p>
 <h2 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h2><h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>会有若干行。  </p>
 <p>并以-1,-1,-1−1,−1,−1结束。</p>
 <p>保证输入的数在[−9223372036854775808,9223372036854775807]之间，并且是整数。</p>
