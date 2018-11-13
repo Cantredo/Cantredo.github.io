@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="Cantredo`s blog">
 <meta property="og:description" content="Doubles Time Limit: 2 Seconds      Memory Limit: 65536 KB   As part of an arithmetic competency program, your students will be given randomly generated lists of from 2 to 15 unique positive integers a">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-12T15:15:42.751Z">
+<meta property="og:updated_time" content="2018-11-12T15:19:31.525Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ZOJ 1760 Doubles">
 <meta name="twitter:description" content="Doubles Time Limit: 2 Seconds      Memory Limit: 65536 KB   As part of an arithmetic competency program, your students will be given randomly generated lists of from 2 to 15 unique positive integers a">
@@ -382,7 +382,7 @@
 <h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a><strong>Input</strong></h3><p>The input file will consist of one or more lists of numbers. There will be one list of numbers per line. Each list will contain from 2 to 15 unique positive integers. No integer will be larger than 99. Each line will be terminated with the integer 0, which is not considered part of the list. A line with the single number -1 will mark the end of the file. The example input below shows 3 separate lists. Some lists may not contain any doubles.</p>
 <h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a><strong>Output</strong></h3><p>The output will consist of one line per input list, containing a count of the items that are double some other item.</p>
 <h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a><strong>Sample Input</strong></h3><p>1 4 3 2 9 7 18 22 0<br>2 4 8 10 0<br>7 5 11 13 1 3 0<br>-1</p>
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a><strong>Sample Output</strong></h3><p>3<br>2<br>0</p>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a><strong>Sample Output</strong></h3><p>3<br>2<br>0   </p>
 <hr>
 <h3 id="Source-Mid-Central-USA-2003"><a href="#Source-Mid-Central-USA-2003" class="headerlink" title="Source: Mid-Central USA 2003"></a>Source: <strong>Mid-Central USA 2003</strong></h3><h3 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;center&gt;Doubles&lt;/center&gt;</span><br><span class="line"></span><br><span class="line">* * *</span><br><span class="line"></span><br><span class="line">&lt;center&gt;Time Limit: 2 Seconds      Memory Limit: 65536 KB&lt;/center&gt;</span><br><span class="line"></span><br><span class="line">* * *</span><br><span class="line"></span><br><span class="line">As part of an arithmetic competency program, your students will be given randomly generated lists of from <span class="number">2</span> to <span class="number">15</span> unique positive integers <span class="keyword">and</span> asked to determine how many items in each <span class="built_in">list</span> are twice some other item in the same <span class="built_in">list</span>. You will need a program to help you with the grading. This program should be able to scan the lists <span class="keyword">and</span> output the correct answer <span class="keyword">for</span> each one. For example, given the <span class="built_in">list</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span> <span class="number">4</span> <span class="number">3</span> <span class="number">2</span> <span class="number">9</span> <span class="number">7</span> <span class="number">18</span> <span class="number">22</span></span><br><span class="line"></span><br><span class="line">your program should answer <span class="number">3</span>, as <span class="number">2</span> is twice <span class="number">1</span>, <span class="number">4</span> is twice <span class="number">2</span>, <span class="keyword">and</span> <span class="number">18</span> is twice <span class="number">9.</span></span><br><span class="line"></span><br><span class="line">**Input**</span><br><span class="line"></span><br><span class="line">The input file will consist of one <span class="keyword">or</span> more lists of numbers. There will be one <span class="built_in">list</span> of numbers per line. Each <span class="built_in">list</span> will contain from <span class="number">2</span> to <span class="number">15</span> unique positive integers. No integer will be larger than <span class="number">99</span>\. Each line will be terminated with the integer <span class="number">0</span>, which is <span class="keyword">not</span> considered part of the <span class="built_in">list</span>. A line with the single number <span class="number">-1</span> will mark the end of the file. The example input below shows <span class="number">3</span> separate lists. Some lists may <span class="keyword">not</span> contain any doubles.</span><br><span class="line"></span><br><span class="line">**Output**</span><br><span class="line"></span><br><span class="line">The output will consist of one line per input <span class="built_in">list</span>, containing a count of the items that are <span class="keyword">double</span> some other item.</span><br><span class="line"></span><br><span class="line">**Sample Input**</span><br><span class="line"></span><br><span class="line"><span class="number">1</span> <span class="number">4</span> <span class="number">3</span> <span class="number">2</span> <span class="number">9</span> <span class="number">7</span> <span class="number">18</span> <span class="number">22</span> <span class="number">0</span></span><br><span class="line"><span class="number">2</span> <span class="number">4</span> <span class="number">8</span> <span class="number">10</span> <span class="number">0</span></span><br><span class="line"><span class="number">7</span> <span class="number">5</span> <span class="number">11</span> <span class="number">13</span> <span class="number">1</span> <span class="number">3</span> <span class="number">0</span></span><br><span class="line"><span class="number">-1</span></span><br><span class="line"></span><br><span class="line"> **Sample Output**</span><br><span class="line"></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"></span><br><span class="line">* * *</span><br><span class="line"></span><br><span class="line">Source: **Mid-Central USA <span class="number">2003</span>**</span><br></pre></td></tr></table></figure>
       
@@ -440,6 +440,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/13/HrbustOJ-1167-每种面值的货币要多少/" rel="prev" title="HrbustOJ 1167 每种面值的货币要多少">
+                HrbustOJ 1167 每种面值的货币要多少 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -520,7 +524,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">52</span>
+                  <span class="site-state-item-count">53</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -609,7 +613,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">30.6k</span>
+    <span title="Site words total count">31.1k</span>
   
 </div>
 
