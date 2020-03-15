@@ -639,8 +639,8 @@
         <category>Online Judge</category>
       </categories>
       <tags>
-        <tag>日常水题</tag>
         <tag>51Nod</tag>
+        <tag>日常水题</tag>
       </tags>
   </entry>
   <entry>
@@ -1089,8 +1089,8 @@
         <category>Online Judge</category>
       </categories>
       <tags>
-        <tag>日常水题</tag>
         <tag>51Nod</tag>
+        <tag>日常水题</tag>
         <tag>快速幂</tag>
       </tags>
   </entry>
@@ -1228,8 +1228,8 @@
         <category>Online Judge</category>
       </categories>
       <tags>
-        <tag>日常水题</tag>
         <tag>51Nod</tag>
+        <tag>日常水题</tag>
         <tag>动态规划</tag>
       </tags>
   </entry>
@@ -1469,8 +1469,8 @@
         <category>Online Judge</category>
       </categories>
       <tags>
-        <tag>日常水题</tag>
         <tag>51Nod</tag>
+        <tag>日常水题</tag>
         <tag>STL</tag>
         <tag>next_permutation()</tag>
       </tags>
@@ -1489,8 +1489,8 @@
         <category>Online Judge</category>
       </categories>
       <tags>
-        <tag>日常水题</tag>
         <tag>51Nod</tag>
+        <tag>日常水题</tag>
         <tag>map</tag>
         <tag>二分</tag>
       </tags>
@@ -1509,8 +1509,8 @@
         <category>Online Judge</category>
       </categories>
       <tags>
-        <tag>日常水题</tag>
         <tag>51Nod</tag>
+        <tag>日常水题</tag>
         <tag>动态规划</tag>
       </tags>
   </entry>
@@ -1549,8 +1549,8 @@
         <category>Online Judge</category>
       </categories>
       <tags>
-        <tag>日常水题</tag>
         <tag>51Nod</tag>
+        <tag>日常水题</tag>
         <tag>贪心</tag>
       </tags>
   </entry>
@@ -1568,8 +1568,8 @@
         <category>Online Judge</category>
       </categories>
       <tags>
-        <tag>日常水题</tag>
         <tag>51Nod</tag>
+        <tag>日常水题</tag>
         <tag>STL</tag>
         <tag>贪心</tag>
         <tag>priority_queue</tag>
@@ -2050,6 +2050,13 @@
 </ol>
 <h1 id="2020年"><a href="#2020年" class="headerlink" title="2020年"></a>2020年</h1><h2 id="2月"><a href="#2月" class="headerlink" title="2月"></a>2月</h2><h3 id="2日-2"><a href="#2日-2" class="headerlink" title="2日"></a>2日</h3><ol>
 <li>增加新文章《顺序表与链表》</li>
+</ol>
+<h3 id="18日-1"><a href="#18日-1" class="headerlink" title="18日"></a>18日</h3><ol>
+<li>增加新文章《RBT(红黑树)的相关操作及代码》</li>
+<li>增加新文章《AVL树的相关操作及代码》</li>
+</ol>
+<h2 id="3月-1"><a href="#3月-1" class="headerlink" title="3月"></a>3月</h2><h3 id="15日-2"><a href="#15日-2" class="headerlink" title="15日"></a>15日</h3><ol>
+<li>更新、优化博客样式</li>
 </ol>
 ]]></content>
       <categories>
